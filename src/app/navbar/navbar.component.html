@@ -1,0 +1,27 @@
+<header class="main-header" *ngIf="isMobile">
+  <div class="header">
+    <label for="btn-nav" class="btn-nav"><i class="fas fa-bars"></i></label>
+    <input type="checkbox" id="btn-nav" />
+    <div class="logo-mobile"><a href="index.html">KH</a></div>
+    <nav class="nav-mobile">
+      <ul class="navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="banner">About</a></li>
+        <li><a href="#features">Projects</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<header class="main-header" *ngIf="!isMobile">
+  <div class="header">
+    <div class="logo"><a href="index.html">KH</a></div>
+    <nav class="nav-desktop" id="nav">
+      <ul class="navigation2">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#banner" class="scrolly">About</a></li>
+        <li><a href="#features" class="scrolly">Projects</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

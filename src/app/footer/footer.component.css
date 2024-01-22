@@ -1,0 +1,105 @@
+.main-footer{
+    margin-top: 40px;
+    width: 100%;
+    height: auto;
+    background:rgba(6, 7, 5);
+}
+
+.footer{
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+
+.contact h3{
+    padding-top: 10px;
+    margin-bottom: 5px;
+    font-size: 25px;
+    }
+
+.contact .contact-me{
+display: inline-flex;
+margin-bottom: 35px;
+justify-content: center;
+gap: 20px;
+}
+    
+.contact .contact-me p{
+    padding-top: 10px;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+    
+.contact p{
+    margin-bottom: 0px;
+}
+
+.contact .icons{
+    width: 150px;
+    border-radius: 20px;
+    display: flex;
+    border: 1px solid rgba(41, 221, 35, 0.753);
+    gap: 14px;
+    justify-content: center;
+    margin: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 0px;
+}
+
+.contact .icons li{
+    list-style:none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact .icons a{
+    outline: none;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.contact .icons a:link {
+    color: white;
+  }
+  
+  .contact .icons a:visited {
+    color: white;
+  }
+  
+  .contact .icons a:hover{
+    color: rgba(41, 221, 35, 0.753);
+}
+
+
+.copyright{
+   margin-top: -10px;
+   padding-bottom: 12px;
+   color: rgba(255, 255, 255, 0.555);
+}
+
+.copyright span{
+margin-left: 5px;
+}
+
+@media screen and (max-width: 600px) {
+    .footer{
+        width: 90%;
+    }
+        
+    .contact .contact-me{
+    gap: 10px;
+    }
+        
+    .contact .contact-me p{
+        font-size: 12px;
+    }
+    
+        
+    .contact p{
+        margin-bottom: 0px;
+    }
+    
+
+}
