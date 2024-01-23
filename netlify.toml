@@ -1,3 +1,6 @@
+[build]
+  publish = "dist/angular-17-app/browser"
+
 [[redirects]]
   from = "/*"
   to = "/angular-17-app/browser/:splat"
