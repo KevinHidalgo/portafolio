@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "/*"
+  to = "/angular-17-app/browser/:splat"
+  status = 200
