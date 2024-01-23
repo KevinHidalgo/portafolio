@@ -324,8 +324,8 @@ gap: 150px;
                 margin: auto;
     
             }
-        
-            
+  
+
             .content2 .items-Experience{
                 width: auto;
                 margin-left: 60px;
@@ -333,7 +333,9 @@ gap: 150px;
             }
         
             .content2 .experience{
+                width: auto;
                 margin: auto;     
+                
             }
        
             .content3{
