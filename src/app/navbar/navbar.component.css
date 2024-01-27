@@ -45,8 +45,8 @@
   top:0;
   width: 200px;
   top:55px;
-  height:calc(100vh - 65px);
-  background:rgba(6, 7, 5);
+  height:calc(80vh - 65px);
+  background:rgba(6, 7, 5, 0.61);
   transform:translateX(-100%);
   transition:.4s ease;
 }

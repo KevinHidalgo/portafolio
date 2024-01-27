@@ -332,10 +332,18 @@ gap: 150px;
                 margin-right: 60px;
             }
         
+            .content2 .experience .years h3{
+                margin: 0; 
+                margin-top: 5px;      
+            }
+        
+            .content2 .experience p{
+                margin-bottom: 15px;
+            }
+
             .content2 .experience{
-                width: auto;
-                margin: auto;     
-                
+            height: auto;    
+            margin: auto;   
             }
        
             .content3{
