@@ -22,11 +22,11 @@ export class BodyComponent {
          const maxTranslateX = 50; // Ajusta el límite máximo hacia la izquierda
          const minTranslateX = -950; // Ajusta el límite máximo hacia la derecha
  
-         if (this.translateX > maxTranslateX) {
+         if (this.translateX > maxTranslateX) { // corrige el posicionamiento en caso que pase por el limite izquierdo
            this.translateX = maxTranslateX;
          }
  
-         if (this.translateX < minTranslateX) {
+         if (this.translateX < minTranslateX) {  // corrige el posicionamiento en caso que pase por el limite derecha
            this.translateX = minTranslateX;
          }
       });

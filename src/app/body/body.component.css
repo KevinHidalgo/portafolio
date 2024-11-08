@@ -10,7 +10,20 @@ gap: 150px;
 
 .content1 .text{
     width: 50%;
+    position: relative;
+    animation: moverCentro 2s ease-out forwards;
 }
+
+
+  /* Animación */
+  @keyframes moverCentro {
+    0% {
+      left: -300px;
+    }
+    100% {
+      left: 0; 
+    }
+  }
 
 .content1 .text h2{
     font-size: 27px;
@@ -57,17 +70,42 @@ gap: 150px;
 .content1 .imagenes .imagen-1{
     height: 220px;
     width: 250px;   
-    border-radius: 40%;
     margin-top: -25px;
+    animation:reducir 2s ease-out forwards;
+    cursor: pointer;
+    transition: width 0.5s;
 }
+
+  /* Animación */
+  @keyframes reducir {
+    0% {
+        border-radius: 0%;
+    }
+    100% {
+        border-radius: 40%;
+       
+    }
+  }
+  .content1 .imagenes .imagen-1:hover {
+    height: 260px;
+    width: 290px; 
+    transform: translateX(-20px);
+  }
 
 .content1 .imagenes .imagen-2{
     height: 150px;
     width: 180px;
     margin-top: 80px;
-    margin-left: -70px;   
-    border-radius: 40%;
+    margin-left: -70px;
+    cursor: pointer;   
+    animation:reducir 2s ease-out forwards;
+    transition: width 0.5s;
    }
+   .content1 .imagenes .imagen-2:hover {
+    height: 160px;
+    width: 190px; 
+    transform: translateX(20px);
+  }
 
    .About{
     max-width: 1000px;

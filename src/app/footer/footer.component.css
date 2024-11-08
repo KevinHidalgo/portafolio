@@ -12,8 +12,8 @@
 }
 
 .contact h3{
-    padding-top: 10px;
-    margin-bottom: 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     font-size: 25px;
     }
 
@@ -75,7 +75,7 @@ gap: 20px;
 
 .copyright{
    margin-top: -10px;
-   padding-bottom: 12px;
+   padding-bottom: 22px;
    color: rgba(255, 255, 255, 0.555);
 }
 
