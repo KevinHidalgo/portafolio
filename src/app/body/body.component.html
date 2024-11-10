@@ -10,16 +10,26 @@
       <button>Download Resume</button>
     </a>
   </div>
-  <div class="imagenes">
+  <div
+    class="imagenes"
+    [ngClass]="{
+      'hover-imagen-1': isHoveringImage1,
+      'hover-imagen-2': isHoveringImage2
+    }"
+  >
     <img
       class="imagen-1"
       src="https://github.com/KevinHidalgo.png"
       alt="Photo Profile"
+      (mouseenter)="onHover('imagen-1')"
+      (mouseleave)="onLeave('imagen-1')"
     />
     <img
       class="imagen-2"
       src="../../assets/images/Coding.gif"
       alt="Photo Laptop"
+      (mouseenter)="onHover('imagen-2')"
+      (mouseleave)="onLeave('imagen-2')"
     />
   </div>
 </div>

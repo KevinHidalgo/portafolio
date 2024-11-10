@@ -1,11 +1,12 @@
-
 .content1{
 max-width: 1000px;
 margin: auto; 
 display: flex;
 justify-content: space-between; 
-margin-top: 120px;
+margin-top: 150px;
+margin-bottom: 140px;
 gap: 150px;
+height: 240px;
 }
 
 .content1 .text{
@@ -45,12 +46,13 @@ gap: 150px;
 
 .content1 .text button{
     text-align:center;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
     height: 35px;
-    width: 130px;
+    width: 160px;
     background-color:rgba(197, 60, 238, 0.753);
     border-radius: 10px;
+    border:2px solid white;
     cursor: pointer;
     transition: all .4s ease;
 }
@@ -58,7 +60,6 @@ gap: 150px;
 .content1 .text button:hover{
     background-color:rgba(41, 221, 35, 0.753);
     color: white;
-    border-radius: 10px;
 }
 
 .content1 .imagenes{
@@ -73,7 +74,7 @@ gap: 150px;
     margin-top: -25px;
     animation:reducir 2s ease-out forwards;
     cursor: pointer;
-    transition: width 0.5s;
+    transition: width 0.5s, height 0.5s, transform 0.5s;
 }
 
   /* Animación */
@@ -86,11 +87,7 @@ gap: 150px;
        
     }
   }
-  .content1 .imagenes .imagen-1:hover {
-    height: 260px;
-    width: 290px; 
-    transform: translateX(-20px);
-  }
+
 
 .content1 .imagenes .imagen-2{
     height: 150px;
@@ -99,25 +96,45 @@ gap: 150px;
     margin-left: -70px;
     cursor: pointer;   
     animation:reducir 2s ease-out forwards;
-    transition: width 0.5s;
+    transition: width 0.5s, height 0.5s, transform 0.5s;
    }
-   .content1 .imagenes .imagen-2:hover {
-    height: 160px;
-    width: 190px; 
-    transform: translateX(20px);
+
+
+  @media (min-width: 800px) { /*hover para pc */
+    .content1 .imagenes .imagen-1:hover {
+        height: 260px;
+        width: 290px; 
+        transform: translateX(-20px);
+      }
+      .content1 .imagenes .imagen-2:hover {
+        height: 175px;
+        width: 205px; 
+        transform: translate(-40px,-30px);
+      }
+
+      .imagen-1,
+      .imagen-2 {
+       transition: opacity 0.3s, transform 0.3s;
+     }  
+     
+     /* Aplica opacidad a la imagen opuesta cuando se pasa el mouse sobre una imagen */
+      .hover-imagen-1 .imagen-2,
+      .hover-imagen-2 .imagen-1 {
+       opacity: 0.2;
+     }
   }
 
    .About{
     max-width: 1000px;
     margin: auto;
-    margin-top: 80px;
-    margin-bottom: 10px;
    }
 
    .About h2{
     font-size: 35px;
     font-weight: 800;
     text-align: center;
+    letter-spacing: 6px;
+    text-shadow: 3px 4px 3px rgba(41, 221, 35, 0.753); /* Sombra letras en verde */
     }
 
    .content2{
@@ -125,7 +142,7 @@ gap: 150px;
     margin: auto; 
     display: flex;
     justify-content: space-between; 
-    margin-top: 50px;
+    margin-top: 60px;
     gap: 20px;
    
     }
@@ -160,11 +177,53 @@ gap: 150px;
         width: 180px;
         height: 90px;
         margin-left: 212px;
-        border: 2px solid  rgba(41, 221, 35, 0.753);
-        outline: 2px solid  rgba(41, 221, 35, 0.753);
-        outline-offset: -13px;
+        cursor: pointer;
+        position: relative;
+        color: #69ca62; /* Color verde */
+        box-shadow: inset 0 0 0 1px rgba(105, 202, 98, 0.5); /* Sombra interna en verde */
+        animation: clipMe 8s linear infinite;
     }
 
+
+.content2 .experience::before,
+.content2 .experience::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  margin: -5%; /* $clip-distance multiplicado por 100% */
+  box-shadow: inset 0 0 0 2px; /* $path-width */
+  animation: clipMe 8s linear infinite;
+}
+
+.content2 .experience::before {
+  animation-delay: -4s; /* $anime-time * -0.5 */
+}
+
+.content2 .experience:hover::before,
+.content2 .experience:hover::after {
+  background-color: rgba(41, 221, 35, 0.1);
+}
+
+/* Animación clipMe */
+@keyframes clipMe {
+  0%, 100% {
+    clip: rect(0px, 190px, 2px, 0px); /* $clip-size = 200px y $path-width = 2px */
+  }
+  25% {
+    clip: rect(0px, 2px, 190px, 0px);
+  }
+  50% {
+    clip: rect(195px, 200px, 190px, 0px); /* $clip-size - $path-width */
+  }
+  75% {
+    clip: rect(0px, 200px, 190px, 198px); /* $clip-size - $path-width */
+  }
+}
+    
     .content2 .experience .years h3{
         color:rgba(197, 60, 238, 0.753);
         font-size: 32px;
@@ -232,7 +291,7 @@ gap: 150px;
     .content3{
         max-width: 1000px;
         margin: auto;
-        margin-top: 80px;
+        margin-top: 140px;
         margin-bottom: 80px;
     }
 
@@ -240,7 +299,9 @@ gap: 150px;
         font-size: 35px;
         font-weight: 800;
         text-align: center;
-        margin-bottom: 40px;
+        margin-bottom: 60px;
+        letter-spacing: 6px;
+        text-shadow: 3px 4px 3px rgba(41, 221, 35, 0.753); /* Sombra letras en verde */
         }
 
     .content3 .container-card{
@@ -320,6 +381,8 @@ gap: 150px;
             flex-direction: column-reverse;
             justify-content: center;
             text-align: center;
+            margin-top: 110px;
+            height: auto;
         }
 
         .content1 .imagenes{
@@ -327,6 +390,9 @@ gap: 150px;
             margin-top: -28px;
         }
 
+        .content1 .imagenes .imagen-1,.content1 .imagenes .imagen-2{
+            cursor:none;  
+        }
         .content1 .text{
             text-align: center;
             margin: auto;

@@ -1,11 +1,12 @@
 import { Component,OnDestroy } from '@angular/core';
 import { interval, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-body',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './body.component.html',
   styleUrl: './body.component.css'
 })
@@ -41,4 +42,25 @@ export class BodyComponent {
     this.destroy$.next();
     this.destroy$.complete();
   }
+
+  // Control hover imagenes 1 y 2
+  isHoveringImage1 = false;
+  isHoveringImage2 = false;
+
+  onHover(image: string) {
+    if (image === 'imagen-1') {
+      this.isHoveringImage1 = true;
+    } else if (image === 'imagen-2') {
+      this.isHoveringImage2 = true;
+    }
+  }
+
+  onLeave(image: string) {
+    if (image === 'imagen-1') {
+      this.isHoveringImage1 = false;
+    } else if (image === 'imagen-2') {
+      this.isHoveringImage2 = false;
+    }
+  }
+
 }
