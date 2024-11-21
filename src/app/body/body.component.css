@@ -142,10 +142,31 @@ height: 240px;
     margin: auto; 
     display: flex;
     justify-content: space-between; 
-    margin-top: 60px;
+    margin-top: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     gap: 20px;
-   
+    position: relative; /*Estilos nuevos*/
+    overflow: hidden;
     }
+
+    .grid-overlay {  /* Contenedor que hara el desvanecido de cuadritos */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(20, 1fr); /* 20 columnas */
+        grid-template-rows: repeat(10, 1fr); /* 10 filas */
+        z-index: 1;
+        pointer-events: none;
+      }
+
+        .grid-cell {
+            opacity: 1 ;
+            transition: opacity 2s ease-in-out; 
+        } 
 
     .content2 .descripcion{
         width: 50%;
@@ -288,10 +309,18 @@ height: 240px;
         right: 10px;
       }
       
+      .content2 .descripcion, /* Nuevo efecto Cuadricula desvanecida */
+      .items-Experience, .skills{
+        position: relative;
+        z-index: 5; /* Por encima de la cuadrícula */
+        opacity: 0;
+        transition: opacity 2s ease-in-out;
+      }
+
     .content3{
         max-width: 1000px;
         margin: auto;
-        margin-top: 140px;
+        margin-top: 100px;
         margin-bottom: 80px;
     }
 
