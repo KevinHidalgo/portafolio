@@ -135,15 +135,23 @@ height: 240px;
     text-align: center;
     letter-spacing: 6px;
     text-shadow: 3px 4px 3px rgba(41, 221, 35, 0.753); /* Sombra letras en verde */
+    opacity: 0; /* Inicialmente invisible */
+    transform: scale(0.5) translateY(100px); /* Escala pequeña y desplazada hacia abajo */
+    transition: transform 1s ease, opacity 1s ease; /* Transiciones suaves */
     }
+
+    .About h2.reveal {
+        opacity: 1; /* Aparece */
+        transform: scale(1) translateY(0); /* Escala y posición originales */
+      }
 
    .content2{
     max-width: 1000px;
     margin: auto; 
     display: flex;
     justify-content: space-between; 
-    margin-top: 20px;
-    padding-top: 40px;
+    margin-top: 30px;
+    padding-top: 30px;
     padding-bottom: 40px;
     gap: 20px;
     position: relative; /*Estilos nuevos*/

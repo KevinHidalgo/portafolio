@@ -1,4 +1,4 @@
-import { Component,OnDestroy, Renderer2,HostListener,AfterViewInit} from '@angular/core';
+import { Component,OnDestroy, Renderer2,HostListener,AfterViewInit,ElementRef,ViewChild } from '@angular/core';
 import { interval, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { CommonModule } from '@angular/common';
@@ -14,6 +14,7 @@ export class BodyComponent implements AfterViewInit{
   translateX: number = 0;
   private destroy$ = new Subject<void>();
   cells: HTMLElement[] = []; // Almacena todas las celdas de la cuadrícula
+  @ViewChild('About') header!: ElementRef;
 
   ngAfterViewInit(): void {
     this.initializeGrid();
@@ -28,7 +29,13 @@ export class BodyComponent implements AfterViewInit{
     const rect = content.getBoundingClientRect();
     const windowHeight = window.innerHeight;
 
-    if (rect.top < windowHeight && rect.bottom > 0) {
+// Calcular el punto medio del rectángulo
+const rectMiddle = (rect.top + rect.bottom) / 2;
+
+// Verificar si el punto medio está dentro del viewport
+if (rectMiddle > 0 && rectMiddle < windowHeight){
+  this.header.nativeElement.classList.add('reveal');
+  //  if (rect.top < windowHeight && rect.bottom > 0) {
       this.animateGrid();
       this.revealContent(descripcion);
       this.revealContent(itemsExperience);
@@ -44,8 +51,8 @@ export class BodyComponent implements AfterViewInit{
       for (let i = 0; i < 200; i++) {
         const cell = this.renderer.createElement('div');
         this.renderer.addClass(cell, 'grid-cell');
-        this.renderer.setStyle(cell,'backgroundColor','rgba(0, 0, 0)'); // Color visible
-        this.renderer.setStyle(cell,'border','1px solid rgba(41, 221, 35, 0.753)'); // Bordes visibles
+        this.renderer.setStyle(cell,'backgroundColor','rgba(41, 221, 35, 0.753)'); // Color visible
+     //   this.renderer.setStyle(cell,'border','1px solid rgba(41, 221, 35, 0.753)'); // Bordes visibles
         // Generar una opacidad inicial aleatoria
         const initialOpacity = Math.random();
         this.renderer.setStyle(cell, 'opacity', initialOpacity.toString());
