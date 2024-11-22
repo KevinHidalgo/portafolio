@@ -494,7 +494,6 @@ height: 240px;
             .content3 .container-card{
                 width: auto;
                 margin: auto;
-             
             }
         
             .content3 .container-card .card{
@@ -640,6 +639,217 @@ height: 240px;
             }
             
       }
+
+/* nueva section */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;600&display=swap');
+	
+.content4{
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 80px;
+    font-family: 'Oswald', sans-serif;
+	/*	width: 90%;
+
+		margin: 0 auto;
+		.row{
+			align-items: center;
+    	height: 100vh;
+		} */
+	}
+
+    .content4 h2{
+        font-size: 35px;
+        font-weight: 800;
+        text-align: center;
+        margin-bottom: 60px;
+        letter-spacing: 6px;
+        text-shadow: 3px 4px 3px rgba(41, 221, 35, 0.753); /* Sombra letras en verde */
+        }
+
+    .content4 .container-card{
+        max-width: 1000px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; 
+    }
+
+.content4 .card{
+	position: relative;
+	height: 410px;
+	width: 410px;
+    margin: 25px;
+	transition: ease all 2.3s;
+	perspective: 1000px;
+	&:hover{
+		.cover{
+			transform: rotateX(0deg) rotateY(-180deg);
+			&:before{
+				transform: translateZ(30px);
+			}
+			&:after{
+				background-color: black;
+			}
+			h1{
+				transform: translateZ(100px);
+			}
+			.price{
+				transform: translateZ(60px);
+			}
+			a{
+				transform: translateZ(-60px) rotatey(-180deg);
+			}
+            p{
+				transform: translateZ(-60px) rotatey(-180deg);
+			}
+            .imagenes-tecnologia{
+                transform: translateZ(-60px) rotatey(-180deg);
+            }
+		}
+	}
+	
+	.cover{
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		transform-style: preserve-3d;
+  	    transition: ease all 2.3s;
+		background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat;
+		&:before{
+			content: '';
+			position: absolute;
+			border: 5px solid rgba(255,255,255,.5);
+			box-shadow: 0 0 12px rgba(14, 180, 14, 0.8); 
+			top:20px;
+			left:20px;
+			right:20px;
+			bottom:20px;
+			z-index: 2;
+			transition: ease all 2.3s;
+			transform-style: preserve-3d;
+			transform: translateZ(0px);
+		}
+		&:after{
+			content: '';
+			position: absolute;
+			top:0px;
+			left:0px;
+			right:0px;
+			bottom:0px;
+			z-index: 2;
+			transition: ease all 1.3s;
+			background: rgba(0,0,0,.4);
+		}
+		&.item-a{
+			background-image: url('../../assets/images/ImagenBargiam2.JPG');
+		}
+		&.item-b{
+			background-image: url('../../assets/images/GalagaStar1.jpg');
+		}
+		&.item-c{
+			background-image: url('../../assets/images/WordPress5.JPG');
+		}
+        &.item-d{
+			background-image: url('../../assets/images/controlGarantias4.jpg');
+		}
+		h1{
+			font-weight: 600;
+			position: absolute;
+			bottom: 55px;
+			left: 50px;
+			color: whitesmoke;
+			transform-style: preserve-3d;
+  		    transition: ease all 2.3s;
+			z-index:3;
+			font-size: 2.5em;
+			transform: translateZ(0px);
+		}
+		.price img{
+            width: 55px;
+            height: auto;
+			position: absolute;
+			top: 55px;
+			right: 50px;
+			color: white;
+			transform-style: preserve-3d;
+  		    transition: ease all 2.3s;
+			z-index:4;
+			font-size: 2em;
+			transform: translateZ(0px);
+		}
+	}
+	.card-back{
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		background: #0b0f08;
+		transform-style: preserve-3d;
+  	    transition: ease all 2.3s;
+		transform: translateZ(-1px);
+		display: flex;
+        flex-direction: column;
+		align-items: center;
+    	justify-content: center;
+		a{
+			transform-style: preserve-3d;
+			transition: ease transform 2.3s, ease background .5s;
+			transform: translateZ(-1px) rotatey(-180deg);
+			background: transparent;
+			border: 1px solid white;
+			font-weight: 200;
+			font-size: 1.3em;
+			color: white;
+			padding: 14px 32px;
+			outline: none;
+			text-decoration: none;
+			&:hover{
+				background-color: white;
+				color: #0b0f08;
+			}
+		}
+        .tecnologia{
+            transform-style: preserve-3d;
+            color:rgba(197, 60, 238, 0.753);;
+            border: 1px solid white ;
+            border-radius: 8px;
+            width: 200px;
+            height: 18px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-align: center;
+            transition: ease transform 2.3s;
+			transform: translateZ(-1px) rotatey(-180deg);
+        }
+        .imagenes-tecnologia{
+            transform-style: preserve-3d;
+            width: 300px;
+            height: auto;
+            transition: ease transform 2.3s;
+			transform: translateZ(-1px) rotatey(-180deg);
+        }
+        .imagenes-tecnologia img{
+            transform-style: preserve-3d;
+            width: 40px;
+            height: auto;
+            margin-left:5px;
+            margin-bottom: 20px;
+        }
+        p{
+            transform-style: preserve-3d;
+            font-size: 14px;
+            text-align: justify;
+            width: 300px;
+            margin-top: 20px;
+            transition: ease transform 2.3s;
+			transform: translateZ(-1px) rotatey(-180deg);
+        }
+	}
+}
 
             /* Moviles */
             @media screen and (max-width: 400px) {
