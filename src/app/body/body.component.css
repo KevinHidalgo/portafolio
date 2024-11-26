@@ -29,21 +29,20 @@ height: 240px;
 .content1 .text h2{
     font-size: 35px;
     margin: auto;
-    margin-top: -50px;
+    margin-top: -80px;
 }
 
 .content1 .text span{
     font-size: 40px;
     position: relative;
-    -webkit-text-stroke: 0.1rem rgba(41, 221, 35, 0.753);
+    -webkit-text-stroke: 0.12rem rgba(41, 221, 35, 0.753);
     color: transparent;
-   /* color:rgba(41, 221, 35, 0.753); */
-  padding: 0 1rem;
     background-image: linear-gradient(rgba(41, 221, 35, 0.753),rgba(41, 221, 35, 0.753));
     background-repeat: no-repeat;
     background-position: 0 0;
     -webkit-background-clip: text;
     animation: animate 6s linear infinite;
+    animation-delay: 2s;
    /* font-weight: 800; */
 }
 
@@ -56,13 +55,14 @@ height: 240px;
     height: 100%;
     border-right: 3px solid rgba(41, 221, 35, 0.753);
     animation: lineaAnimacion 6s linear infinite;
+    animation-delay: 2s;
 }
 
 @keyframes animate{
     0%, 10%, 100%{
         background-position: -22rem 0;
     }
-    70%,80%{
+    50%,70%{
         background-position: 0 0;
     }
 }
@@ -70,15 +70,16 @@ height: 240px;
     0%, 10%, 100%{
         width: 0%;
     }
-    70%,80%{
+    50%,70%{
         width: 100%;
     }
 }
 
 .content1 .text p{
     text-align:left;
-    margin-bottom: 46px; 
-    margin-top: 24px;
+    margin-bottom: 36px; 
+    margin-top: 34px;
+    width: 110%;
 }
 
 .content1 .text button{
@@ -103,6 +104,7 @@ height: 240px;
     width: 50%;
     display: flex;
     justify-content: center;
+    margin-top: -20px;
 }
 
 .content1 .imagenes .imagen-1{
@@ -459,6 +461,8 @@ height: 240px;
             height: auto;
         }
 
+
+
         .content1 .imagenes{
             margin: auto;
             margin-top: -28px;
@@ -475,8 +479,7 @@ height: 240px;
         }
 
         .content1 .text h2{
-            width: 400px;
-            font-size: 27px;
+            width: 500px;    
             margin: auto;
         }
                 
@@ -486,17 +489,36 @@ height: 240px;
             margin-top: 25px;
             padding-left: 100px;
             padding-right: 100px;
+            width: 100%;
         }
 
         .content1 .text span{
             padding: 0;
             margin: 0;
-            animation: animate 4.5s linear infinite;
+            animation: animate 5s linear infinite;
+            animation-delay: 2s;
         }
 
         .content1 .text span::before{
-            animation: lineaAnimacion 4.5s linear infinite;
-        
+            animation: lineaAnimacion 5s linear infinite;
+            animation-delay: 2s;
+        }
+
+        @keyframes animate{
+            0%, 10%, 100%{
+                background-position: -30rem 0;
+            }
+            50%,70%{
+                background-position: 0 0;
+            }
+        }
+        @keyframes lineaAnimacion{
+            0%, 10%, 100%{
+                width: 0%;
+            }
+            50%,70%{
+                width: 100%;
+            }
         }
 
         .content2{
@@ -612,14 +634,16 @@ height: 240px;
             }
             
             .content1 .text h2{
-                font-size: 25px;
+                font-size: 30px;
                 padding: 0;
                 margin:auto;
+                margin-left: -15px;
                 text-align: center;
             }
             
             .content1 .text span{
-                font-size: 25px;
+                font-size: 40px;
+                margin-top: 5px; 
             }
             
             .content1 .text p{
@@ -628,15 +652,41 @@ height: 240px;
                 padding: 0;
                 margin:auto; 
                 margin-bottom: 46px; 
-                margin-top: 24px; 
+                margin-top: 26px; 
             }
 
             .content1 .imagenes{
                 width: 100%;
             }
 
+            .content1 .imagenes .imagen-1{
+                cursor: pointer;
+                transition: width 0.5s, height 0.5s, transform 0.5s;
+                animation: reducir 2s ease-out forwards,bounce-down 1.8s ease-in-out forwards 2.5s;
+             
+            }
+            .content1 .imagenes .imagen-2{
+                cursor: pointer;
+                transition: width 0.5s, height 0.5s, transform 0.5s;
+                animation: reducir 2s ease-out forwards,bounce-down 1s ease-in-out forwards 3.5s;
+            }
+            /* Animación */
+            @keyframes bounce-down {
+                0% {
+                transform: translateY(0);
+                }
+                60% {
+                transform: translateY(10px);
+                }
+                90% {
+                transform: translateY(5px);
+                }
+                100% {
+                transform: translateY(35px);
+                }
+            }
             .content2 .descripcion{
-                width: 100%;
+                width: 88%;
                 margin: auto;
             }
 
