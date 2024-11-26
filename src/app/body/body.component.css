@@ -637,13 +637,14 @@ height: 240px;
                 font-size: 30px;
                 padding: 0;
                 margin:auto;
-                margin-left: -15px;
+              
                 text-align: center;
             }
             
             .content1 .text span{
                 font-size: 40px;
                 margin-top: 5px; 
+                width: 80%;
             }
             
             .content1 .text p{
