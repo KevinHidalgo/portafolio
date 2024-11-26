@@ -27,16 +27,52 @@ height: 240px;
   }
 
 .content1 .text h2{
-    font-size: 27px;
+    font-size: 30px;
     margin: auto;
 }
 
 .content1 .text span{
-    font-size: 27px;
-    color:rgba(41, 221, 35, 0.753);
-    font-weight: 800;
+    font-size: 40px;
+    position: relative;
+    -webkit-text-stroke: 0.1rem rgba(41, 221, 35, 0.753);
+    color: transparent;
+   /* color:rgba(41, 221, 35, 0.753); */
+  padding: 0 1rem;
+    background-image: linear-gradient(rgba(41, 221, 35, 0.753),rgba(41, 221, 35, 0.753));
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    -webkit-background-clip: text;
+    animation: animate 6s linear infinite;
+   /* font-weight: 800; */
 }
 
+.content1 .text span::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    border-right: 3px solid rgba(41, 221, 35, 0.753);
+    animation: lineaAnimacion 6s linear infinite;
+}
+
+@keyframes animate{
+    0%, 10%, 100%{
+        background-position: -22rem 0;
+    }
+    70%,80%{
+        background-position: 0 0;
+    }
+}
+@keyframes lineaAnimacion{
+    0%, 10%, 100%{
+        width: 0%;
+    }
+    70%,80%{
+        width: 100%;
+    }
+}
 
 .content1 .text p{
     text-align:left;
@@ -451,6 +487,17 @@ height: 240px;
             padding-right: 100px;
         }
 
+        .content1 .text span{
+            padding: 0;
+            margin: 0;
+            animation: animate 4.5s linear infinite;
+        }
+
+        .content1 .text span::before{
+            animation: lineaAnimacion 4.5s linear infinite;
+        
+        }
+
         .content2{
             width: 100%;
             flex-direction: column;
@@ -682,7 +729,9 @@ height: 240px;
     margin: 25px;
 	transition: ease all 2.3s;
 	perspective: 1000px;
+    cursor: pointer;
 	&:hover{
+        
 		.cover{
 			transform: rotateX(0deg) rotateY(-180deg);
 			&:before{
