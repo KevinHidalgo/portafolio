@@ -2,7 +2,8 @@
     margin-top: 40px;
     width: 100%;
     height: auto;
-    background:rgba(6, 7, 5);
+    background:var(--footer-bg);
+    box-shadow: 15px 1px 30px var(--decoracion);            
 }
 
 .footer{
@@ -15,6 +16,7 @@
     padding-top: 20px;
     padding-bottom: 20px;
     font-size: 25px;
+    color:var(--text-color3);
     }
 
 .contact .contact-me{
@@ -28,18 +30,20 @@ gap: 20px;
     padding-top: 10px;
     margin-bottom: 5px;
     font-size: 18px;
+    color:var(--text-color);
 }
 
     
 .contact p{
     margin-bottom: 0px;
+    color:var(--text-color);
 }
 
 .contact .icons{
     width: 150px;
     border-radius: 20px;
     display: flex;
-    border: 1px solid rgba(41, 221, 35, 0.753);
+    border: 1px solid var(--decoracion);
     gap: 14px;
     justify-content: center;
     margin: auto;
@@ -61,22 +65,22 @@ gap: 20px;
 }
 
 .contact .icons a:link {
-    color: white;
+    color: var(--text-color);
   }
   
   .contact .icons a:visited {
-    color: white;
+    color: var(--text-color);
   }
   
   .contact .icons a:hover{
-    color: rgba(41, 221, 35, 0.753);
+    color: var(--decoracion);
 }
 
 
 .copyright{
    margin-top: -10px;
    padding-bottom: 22px;
-   color: rgba(255, 255, 255, 0.555);
+   color: var(--text-color3);
 }
 
 .copyright span{

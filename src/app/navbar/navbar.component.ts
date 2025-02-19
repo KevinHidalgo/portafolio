@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Output } from '@angular/core';
+import { Component, OnInit,Output } from '@angular/core';
 import { FormsModule } from '@angular/forms'; // 🔹 Importa FormsModule
 
 @Component({
@@ -9,10 +9,25 @@ import { FormsModule } from '@angular/forms'; // 🔹 Importa FormsModule
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit{
   isMobile: boolean = false;
   menuOpen: boolean=false;
   menu_icon: string='fas fa-bars';
+  isLightTheme = false;
+
+  ngOnInit() {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') {
+      this.isLightTheme = true;
+      document.body.classList.add('light-theme');
+    }
+  }
+
+  toggleTheme() {
+    this.isLightTheme = !this.isLightTheme;
+    document.body.classList.toggle('light-theme', this.isLightTheme);
+    localStorage.setItem('theme', this.isLightTheme ? 'light' : 'dark');
+  }
 
   constructor() {
     this.checkScreenWidth();

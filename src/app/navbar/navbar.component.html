@@ -8,11 +8,17 @@
     <div class="logo-mobile"><a href="index.html">KH</a></div>
     <nav class="nav-mobile" [class.active]="menuOpen">
       <ul class="navigation">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#About">About</a></li>
-        <li><a href="#Project">Projects</a></li>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="#About">ABOUT</a></li>
+        <li><a href="#Project">PROJECTS</a></li>
       </ul>
     </nav>
+    <div class="switch-mobile">
+      <label class="switch">
+        <input type="checkbox" (click)="toggleTheme()" />
+        <span class="slider round"></span>
+      </label>
+    </div>
   </div>
 </header>
 
@@ -21,9 +27,15 @@
     <div class="logo"><a href="index.html">KH</a></div>
     <nav class="nav-desktop" id="nav">
       <ul class="navigation2">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#About" class="scrolly">About</a></li>
-        <li><a href="#Project" class="scrolly">Projects</a></li>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="#About" class="scrolly">ABOUT</a></li>
+        <li><a href="#Project" class="scrolly">PROJECTS</a></li>
+        <li>
+          <label class="switch">
+            <input type="checkbox" (click)="toggleTheme()" />
+            <span class="slider round"></span>
+          </label>
+        </li>
       </ul>
     </nav>
   </div>

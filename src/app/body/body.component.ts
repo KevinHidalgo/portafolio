@@ -51,7 +51,7 @@ if (rectMiddle > 0 && rectMiddle < windowHeight){
       for (let i = 0; i < 200; i++) {
         const cell = this.renderer.createElement('div');
         this.renderer.addClass(cell, 'grid-cell');
-        this.renderer.setStyle(cell,'backgroundColor','rgba(41, 221, 35, 0.753)'); // Color visible
+        this.renderer.setStyle(cell,'backgroundColor','var(--decoracion)'); // Color visible
      //   this.renderer.setStyle(cell,'border','1px solid rgba(41, 221, 35, 0.753)'); // Bordes visibles
         // Generar una opacidad inicial aleatoria
         const initialOpacity = Math.random();

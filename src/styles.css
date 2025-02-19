@@ -1,4 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --bg-gradient: linear-gradient(135deg, rgba(19, 22, 19, 0.699), rgba(7, 80, 5, 0.151) 40%, rgba(19, 22, 19, 0.699) 41%, rgba(7, 80, 5, 0.151) 82%, rgba(19, 22, 19, 0.699) 83%, rgba(7, 80, 5, 0.151) 100%);
+    --text-color: #ffffff;
+    --text-color2: #ffffff;
+    --text-color3: #ffffff;
+    --color-bg: rgba(41, 221, 35, 0.753);
+    --header-bg: rgba(6, 7, 5);
+    --footer-bg: rgba(6, 7, 5);
+    --decoracion: rgba(41, 221, 35, 0.753);
+    --decoracion2: rgba(197, 60, 238, 0.753);
+    --decoracion3: rgba(197, 60, 238, 0.753);
+    --decoracion4: rgba(41, 221, 35, 0.753);
+    --IncrementoDecoracion: rgba(41, 221, 35, 0.9);
+    --contenido:rgba(75, 70, 70, 0.466);
+    --sombraSuperior:rgba(0, 0, 0, 0.2);
+    --sombraInterna:rgba(105, 202, 98, 0.5);
+    --sombraTarjeta:rgba(0, 0, 0, 0.2);
+}
+
+.light-theme {
+    --bg-gradient: linear-gradient(135deg, #FFFFFF, #E9F1FA 40%, #FFFFFF 41%, #E9F1FA 82%, #FFFFFF 83%, #E9F1FA 100%);
+    --text-color: #072f50;
+    --text-color2: #FFFFFF;
+    --text-color3: #00ABE4;
+    --color-bg: #072f50;
+    --header-bg: #E9F1FA;
+    --footer-bg: #E9F1FA;
+    --decoracion:#00ABE4;
+    --decoracion2: #00ABE4;
+    --decoracion3: #072f50;
+    --decoracion4: #072f50;
+    --IncrementoDecoracion: rgb(0, 171, 228,0.9);
+    --contenido:#072f50;
+    --sombraSuperior:#072f5091;
+    --sombraInterna:rgb(0, 171, 228,0.5);
+    --sombraTarjeta:rgba(0, 0, 0, 0.2);
+}
+    /*azul claro (#E9F1FA), azul brillante (#00ABE4), blanco (#FFFFFF)*/
+
+
+
 *{
     color-scheme:dark;
     box-sizing: border-box;
@@ -8,7 +49,7 @@
 
 body{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background: linear-gradient(135deg, rgba(19, 22, 19, 0.699),rgba(7, 80, 5, 0.151) 40%,rgba(19, 22, 19, 0.699) 41%, rgba(7, 80, 5, 0.151) 82%,rgba(19, 22, 19, 0.699) 83%,rgba(7, 80, 5, 0.151) 100%);
+    background: var(--bg-gradient);
     background-attachment: fixed; /* Fija el fondo al viewport */
     background-size: cover; /* Asegura que cubra todo */
 }
