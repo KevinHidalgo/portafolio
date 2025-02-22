@@ -11,6 +11,7 @@
     --decoracion2: rgba(197, 60, 238, 0.753);
     --decoracion3: rgba(197, 60, 238, 0.753);
     --decoracion4: rgba(41, 221, 35, 0.753);
+    --decoracion5: rgba(197, 60, 238, 0.753);
     --IncrementoDecoracion: rgba(41, 221, 35, 0.9);
     --contenido:rgba(75, 70, 70, 0.466);
     --sombraSuperior:rgba(0, 0, 0, 0.2);
@@ -30,6 +31,7 @@
     --decoracion2: #00ABE4;
     --decoracion3: #072f50;
     --decoracion4: #072f50;
+    --decoracion5: #fc5d01;
     --IncrementoDecoracion: rgb(0, 171, 228,0.9);
     --contenido:#072f50;
     --sombraSuperior:#072f5091;
@@ -52,4 +54,5 @@ body{
     background: var(--bg-gradient);
     background-attachment: fixed; /* Fija el fondo al viewport */
     background-size: cover; /* Asegura que cubra todo */
+
 }
