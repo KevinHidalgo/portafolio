@@ -5,7 +5,8 @@
     --text-color2: #ffffff;
     --text-color3: #ffffff;
     --color-bg: rgba(41, 221, 35, 0.753);
-    --header-bg: rgba(6, 7, 5);
+    --header-bg: rgba(6, 7, 5,0.8);
+    --header-bg2: rgba(6, 7, 5,0.1);
     --footer-bg: rgba(6, 7, 5);
     --decoracion: rgba(41, 221, 35, 0.753);
     --decoracion2: rgba(197, 60, 238, 0.753);
@@ -17,6 +18,7 @@
     --sombraSuperior:rgba(0, 0, 0, 0.2);
     --sombraInterna:rgba(105, 202, 98, 0.5);
     --sombraTarjeta:rgba(0, 0, 0, 0.2);
+    --sombraTarjeta2:rgba(0, 0, 0, 0.2);
 }
 
 .light-theme {
@@ -25,7 +27,8 @@
     --text-color2: #FFFFFF;
     --text-color3: #00ABE4;
     --color-bg: #072f50;
-    --header-bg: #E9F1FA;
+    --header-bg: rgb(233, 241, 250,0.8);
+    --header-bg2: rgb(233, 241, 250);
     --footer-bg: #E9F1FA;
     --decoracion:#00ABE4;
     --decoracion2: #00ABE4;
@@ -37,6 +40,7 @@
     --sombraSuperior:#072f5091;
     --sombraInterna:rgb(0, 171, 228,0.5);
     --sombraTarjeta:rgba(0, 0, 0, 0.2);
+    --sombraTarjeta2:rgb(233, 241, 250);
 }
     /*azul claro (#E9F1FA), azul brillante (#00ABE4), blanco (#FFFFFF)*/
 

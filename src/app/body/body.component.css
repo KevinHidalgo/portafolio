@@ -42,7 +42,7 @@ max-width: 1000px;
 margin: auto; 
 display: flex;
 justify-content: space-between; 
-margin-top: 190px;
+margin-top: 258px;
 margin-bottom: 130px;
 gap: 150px;
 height: 240px;
@@ -525,7 +525,7 @@ height: 240px;
             flex-direction: column-reverse;
             justify-content: center;
             text-align: center;
-            margin-top: 110px;
+            margin-top: 150px;
             height: auto;
         }
 

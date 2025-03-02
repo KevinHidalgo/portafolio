@@ -1,4 +1,8 @@
-<header class="main-header-mobile" *ngIf="isMobile">
+<header
+  class="main-header-mobile"
+  *ngIf="isMobile"
+  [ngClass]="{ scrolled: isScrolled }"
+>
   <div class="header">
     <label for="btn-nav" class="btn-nav" (click)="toggleMenu()">
       <i class="{{ menu_icon }}"></i>
@@ -22,7 +26,11 @@
   </div>
 </header>
 
-<header class="main-header" *ngIf="!isMobile">
+<header
+  class="main-header"
+  *ngIf="!isMobile"
+  [ngClass]="{ scrolled: isScrolled }"
+>
   <div class="header">
     <div class="logo"><a href="index.html">KH</a></div>
     <nav class="nav-desktop" id="nav">

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit,Output } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { FormsModule } from '@angular/forms'; // 🔹 Importa FormsModule
 
 @Component({
@@ -14,6 +14,12 @@ export class NavbarComponent implements OnInit{
   menuOpen: boolean=false;
   menu_icon: string='fas fa-bars';
   isLightTheme = false;
+  isScrolled = false;
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.isScrolled = window.scrollY > 100; // Detecta si el usuario ha bajado más de 100px
+  }
 
   ngOnInit() {
     const savedTheme = localStorage.getItem('theme');

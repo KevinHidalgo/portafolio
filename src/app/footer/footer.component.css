@@ -3,7 +3,8 @@
     width: 100%;
     height: auto;
     background:var(--footer-bg);
-    box-shadow: 15px 1px 30px var(--decoracion);            
+    box-shadow: 0px 23px 92px var(--decoracion);
+    border-top: 1px solid var(--decoracion4);         
 }
 
 .footer{
