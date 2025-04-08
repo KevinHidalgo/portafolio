@@ -17,12 +17,19 @@
         <li><a href="#Project">PROJECTS</a></li>
       </ul>
     </nav>
-    <div class="switch-mobile">
-      <label class="switch">
-        <input type="checkbox" (click)="toggleTheme()" />
-        <span class="slider round"></span>
-      </label>
-    </div>
+
+    <!-- Interruptor para cambiar el tema -->
+    <label class="switch">
+      <input
+        type="checkbox"
+        [checked]="isLightTheme"
+        (change)="toggleTheme()"
+      />
+      <span class="slider round">
+        <i class="fa-solid fa-moon icon moon"></i>
+        <i class="fas fa-sun icon sun"></i>
+      </span>
+    </label>
   </div>
 </header>
 
@@ -40,8 +47,15 @@
         <li><a href="#Project" class="scrolly">PROJECTS</a></li>
         <li>
           <label class="switch">
-            <input type="checkbox" (click)="toggleTheme()" />
-            <span class="slider round"></span>
+            <input
+              type="checkbox"
+              [checked]="isLightTheme"
+              (click)="toggleTheme()"
+            />
+            <span class="slider round">
+              <i class="fa-solid fa-moon icon moon"></i>
+              <i class="fas fa-sun icon sun"></i>
+            </span>
           </label>
         </li>
       </ul>

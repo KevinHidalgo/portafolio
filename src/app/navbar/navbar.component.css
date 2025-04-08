@@ -132,15 +132,43 @@
   color:var(--decoracion4);
 }
 
-.main-header-mobile .switch-mobile{
-position: absolute;
-right: 20px;
-top: 8px;
+.main-header-mobile .switch {
+  position: absolute;
+  top:15px;
+  right: 15px;
+  width: 60px;
+  height: 30px;
 }
 
-.main-header.scrolled switch,
-.main-header-mobile.scrolled .switch-mobile{
-  top: 19px;
+.main-header-mobile.scrolled .switch {
+  top:30px;
+  width: 80px;
+  height: 60px;
+}
+
+/* Iconos en mobile */
+.main-header-mobile .switch .icon {
+  font-size: 18px; /* Aumentar el tamaño del icono en móviles */
+}
+
+.main-header-mobile .switch .icon.moon {
+  left: 8px; /* Ajustamos la posición de la luna a la izquierda */
+}
+
+.main-header-mobile .switch .icon.sun {
+  right: 7px; /* Ajustamos la posición del sol a la derecha */
+}
+
+/* Ajustamos el círculo de desplazamiento para que sea adecuado para móviles */
+.main-header-mobile .switch .slider:before {
+  width: 25px;
+  height: 25px;
+}
+.main-header-mobile .switch input:checked + .slider:before {
+  transform: translateX(30px); /* Mueve el círculo */
+}
+.main-header-mobile.scrolled .switch input:checked + .slider:before {
+  transform: translateX(28px);
 }
 
 /* Desktop */
@@ -227,21 +255,114 @@ color: var(--decoracion);
 }
 
 .switch {
-  position: relative;
-  display: inline-block;
+  position: absolute;
+  top:20px;
   width: 50px;
   height: 25px;
 }
+
 .main-header.scrolled .switch,
 .main-header-mobile.scrolled .switch {
   width: 60px;
-  height: 33px;
+  height: 30px;
 }
 
 .switch input { 
   opacity: 0;
   width: 0;
   height: 0;
+}
+
+.switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--icono);
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+.switch .slider:before {
+  position: absolute;
+  content: '';
+  height: 21px;
+  width: 21px;
+  border-radius: 50%;
+  left: 2px;
+  bottom: 2px;
+  right: 2px;
+  background-color: var( --footer-bg);
+  transition: 0.4s;
+}
+/* Escalado cuando está scrolled */
+.main-header.scrolled .switch .slider:before,
+.main-header-mobile.scrolled .switch .slider:before {
+  height: 26px;
+  width: 26px;
+  left: 2px;
+  bottom: 2px;
+}
+/* Iconos de FontAwesome */
+.main-header .switch .icon,
+.main-header-mobile .switch .icon{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  transition: opacity 0.3s ease;
+}
+/* Tamaño del icono cuando está scrolled */
+.main-header.scrolled .switch .icon,
+.main-header-mobile.scrolled .switch .icon {
+  font-size: 20px;
+}
+
+.switch .icon.moon {
+  left: 5px;
+  opacity: 1;
+  color: var(--icono); /* Para la luna, color de decoración */
+}
+
+.switch .icon.sun {
+  right: 5px;
+  opacity: 1;
+  color: var(--icono); /* Para el sol, color de decoración */
+}
+
+.switch input:checked + .slider {
+  background-color: var(--decoracion); /* Cambiar color según el tema */
+}
+
+/* Movimiento del circulito en el switch */
+.main-header .switch input:checked + .slider:before{
+  transform: translateX(25px);
+}
+
+.main-header.scrolled .switch input:checked + .slider:before{
+  transform: translateX(30px);
+}
+
+/* Mostrar solo el sol en light-theme */
+.light-theme .switch .icon.sun {
+  opacity: 1;
+  color: var(--decoracion); /* Se ve turquesa */
+}
+
+.light-theme .switch .icon.moon {
+  opacity: 0;
+}
+
+/* Mostrar solo la luna en dark-theme */
+.dark-theme .switch .icon.sun {
+  opacity: 0;
+}
+
+.dark-theme .switch .icon.moon {
+  opacity: 1;
+  color: var(--decoracion); /* La luna se ve verde */
 }
 
 .slider {

@@ -13,26 +13,34 @@ export class NavbarComponent implements OnInit{
   isMobile: boolean = false;
   menuOpen: boolean=false;
   menu_icon: string='fas fa-bars';
-  isLightTheme = false;
   isScrolled = false;
+  isLightTheme: boolean = true; // por defecto en claro
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
     this.isScrolled = window.scrollY > 100; // Detecta si el usuario ha bajado más de 100px
   }
 
-  ngOnInit() {
+ 
+
+  ngOnInit(): void {
     const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'light') {
-      this.isLightTheme = true;
-      document.body.classList.add('light-theme');
-    }
+    this.isLightTheme = savedTheme === 'light';
+
+    // Sincroniza el tema con el body
+    document.body.classList.toggle('light-theme', this.isLightTheme);
+    document.body.classList.toggle('dark-theme', !this.isLightTheme);
   }
 
   toggleTheme() {
     this.isLightTheme = !this.isLightTheme;
-    document.body.classList.toggle('light-theme', this.isLightTheme);
+
+    // Almacena el tema seleccionado en el localStorage
     localStorage.setItem('theme', this.isLightTheme ? 'light' : 'dark');
+
+    // Cambia la clase de body según el tema
+    document.body.classList.toggle('light-theme', this.isLightTheme);
+    document.body.classList.toggle('dark-theme', !this.isLightTheme);
   }
 
   constructor() {

@@ -74,9 +74,10 @@ height: 240px;
 }
 
 .content1 .text span{
+    font-family: "Pacifico", system-ui;
     font-size: 40px;
     position: relative;
-    -webkit-text-stroke: 0.12rem var(--decoracion);
+    -webkit-text-stroke: 0.12rem var(--palabraEspecial);
     color: transparent;
     background-image: linear-gradient(var(--decoracion),var(--decoracion));
     background-repeat: no-repeat;
