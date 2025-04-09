@@ -15,6 +15,7 @@ export class BodyComponent implements AfterViewInit{
   private destroy$ = new Subject<void>();
   cells: HTMLElement[] = []; // Almacena todas las celdas de la cuadrícula
   @ViewChild('About') header!: ElementRef;
+  showModal:boolean = false;
 
   ngAfterViewInit(): void {
     this.initializeGrid();
@@ -29,6 +30,7 @@ export class BodyComponent implements AfterViewInit{
     const rect = content.getBoundingClientRect();
     const windowHeight = window.innerHeight;
 
+    
 // Calcular el punto medio del rectángulo
 const rectMiddle = (rect.top + rect.bottom) / 2;
 
@@ -129,4 +131,11 @@ if (rectMiddle > 0 && rectMiddle < windowHeight){
     }
   }
 
+  openModal() {
+    this.showModal = true;
+  }
+  
+  closeModal() {
+    this.showModal = false;
+  }
 }

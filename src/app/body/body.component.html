@@ -149,115 +149,116 @@
     </div>
   </div>
 </div>
-
-<!-- <div class="content3">
-  <h2 id="Project">PROJECTS</h2>
-
-  <div class="container-card">
-    <div class="card">
-      <div class="img-principal">
-        <a href="https://bargiam.com/" target="_blank">
-          <img src="../../assets/images/ImagenBargiam.JPG"
-        /></a>
+<div class="Project"><h2 id="Project" #Project>PROJECTS</h2></div>
+<div class="content3">
+  <div class="project-card">
+    <img src="../../assets/images/bargiam.JPG" alt="Bargiam Web Page" />
+    <div class="card-content">
+      <h3>Bargiam Web Page</h3>
+      <p>
+        Professional website with a custom design, developed in WordPress.
+        Includes interactive sections such as products, galleries, and contact
+        information.
+      </p>
+      <div class="tech-icons">
+        <img src="../../assets/images/pic08.webp" alt="Tech 1" />
       </div>
-
-      <div class="description">
-        <h3>
-          Bargiam Web Page (Go
-          <a href="https://bargiam.com/" target="_blank"
-            ><i class="fa-solid fa-eye"></i
-          ></a>
-          )
-        </h3>
-
-        <div class="tecnologia">
-          <p>TECHNOLOGY</p>
-          <div class="imagenes-tecnologia">
-            <img src="../../assets/images/pic08.webp" />
-          </div>
-        </div>
-        <p>
-          Web page created by the Bargiam business that produces and exports
-          national foods, is an informative page containing various sections
-          such as home, food, products, galleries and contacts.
-        </p>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="img-principal">
-        <img src="../../assets/images/GalagaStar.jpg" />
-      </div>
-
-      <div class="description">
-        <h3>Galaga Star (Game)</h3>
-        <div class="tecnologia">
-          <p>TECHNOLOGY</p>
-          <div class="imagenes-tecnologia">
-            <img src="../../assets/images/pic04.webp" />
-          </div>
-        </div>
-        <p>
-          Is an exciting game inspired by the legendary Galaga. Fight against
-          alien ships as you prepare for an exciting showdown with the main boss
-          ship.
-        </p>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="img-principal">
-        <img src="../../assets/images/WordPress.JPG" />
-      </div>
-      <div class="description">
-        <h3>Page GBM</h3>
-        <div class="tecnologia">
-          <p>TECHNOLOGY</p>
-          <div class="imagenes-tecnologia">
-            <img src="../../assets/images/pic09.webp" />
-            <img src="../../assets/images/pic01.webp" />
-            <img src="../../assets/images/pic04.webp" />
-            <img src="../../assets/images/pic02.webp" />
-            <img src="../../assets/images/pic05.webp" />
-            <img src="../../assets/images/pic08.webp" />
-          </div>
-        </div>
-        <p>
-          It was developed in a team of 5 members. I dedicated myself to all the
-          development regarding the blog of the frontend and backend page, list
-          of authors and management of articles for each author.
-        </p>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="img-principal">
-        <img src="../../assets/images/controlGarantias.jpg" />
-      </div>
-
-      <div class="description">
-        <h3>Guarantees Control GND</h3>
-        <div class="tecnologia">
-          <p>TECHNOLOGY</p>
-          <div class="imagenes-tecnologia">
-            <img src="../../assets/images/pic11.webp" />
-            <img src="../../assets/images/pic10.webp" />
-            <img src="../../assets/images/pic01.webp" />
-            <img src="../../assets/images/pic04.webp" />
-            <img src="../../assets/images/pic03.webp" />
-            <img src="../../assets/images/pic06.webp" />
-          </div>
-        </div>
-        <p>
-          In this system you could create, edit, display or delete user and
-          warranty tickets. It has roles and a log was also created to control
-          the actions.
-        </p>
+      <div class="card-actions">
+        <a href="https://bargiam.com/" target="_blank" class="btn">Site</a>
+        <span class="btn disabled"
+          >Private <i class="fa-brands fa-github"></i
+        ></span>
       </div>
     </div>
   </div>
-</div>  -->
 
+  <div class="project-card">
+    <img src="../../assets/images/Galaga.png" alt="Galaga Star" />
+    <div class="card-content">
+      <h3>Galaga Star (Game)</h3>
+      <p>
+        Retro-style arcade game built using the Phaser library (JavaScript).
+        Features shooting mechanics, wave-based enemies, and a final boss battle
+        in space.
+      </p>
+      <div class="tech-icons">
+        <img src="../../assets/images/pic04.webp" alt="Tech 2" />
+      </div>
+      <div class="card-actions">
+        <a href="#" target="_blank" class="btn disabled">Site</a>
+        <span class="btn">Public <i class="fa-brands fa-github"></i></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <img
+      src="../../assets/images/controlGarantias1.jpg"
+      alt="Guarantees Control GND"
+    />
+    <div class="card-content">
+      <h3>Guarantees Control GND</h3>
+      <p>
+        Internal system developed by four people. I was responsible for the
+        frontend and backend: user and ticket management (CRUD), role-based
+        access control, and activity logging.
+      </p>
+      <div class="tech-icons">
+        <img src="../../assets/images/pic11.webp" alt="Tech 2" />
+        <img src="../../assets/images/pic10.webp" alt="Tech 3" />
+        <img src="../../assets/images/pic01.webp" alt="Tech 4" />
+        <img src="../../assets/images/pic04.webp" alt="Tech 5" />
+        <img src="../../assets/images/pic03.webp" alt="Tech 6" />
+        <img src="../../assets/images/pic06.webp" alt="Tech 7" />
+      </div>
+      <div class="card-actions">
+        <span class="btn" (click)="openModal()">Private Project 🔒</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <img src="../../assets/images/GBM.JPG" alt="Guarantees Control GND" />
+    <div class="card-content">
+      <h3>GBM Web Page</h3>
+      <p>
+        It was developed in a team of 5 members. I dedicated myself to all the
+        development regarding the blog of the frontend and backend page, list of
+        authors and management of articles for each author.
+      </p>
+      <div class="tech-icons">
+        <img src="../../assets/images/pic09.webp" alt="Tech 1" />
+        <img src="../../assets/images/pic01.webp" alt="Tech 1" />
+        <img src="../../assets/images/pic04.webp" alt="Tech 1" />
+        <img src="../../assets/images/pic02.webp" alt="Tech 1" />
+        <img src="../../assets/images/pic05.webp" alt="Tech 1" />
+        <img src="../../assets/images/pic08.webp" alt="Tech 1" />
+      </div>
+      <div class="card-actions">
+        <a href="https://www.gbm.net/blog/" target="_blank" class="btn">Site</a>
+        <span class="btn disabled"
+          >Private <i class="fa-brands fa-github"></i
+        ></span>
+      </div>
+    </div>
+  </div>
+  <!-- Agrega aquí los otros proyectos igual... -->
+</div>
+
+<!-- Modal -->
+<div class="modal-overlay" *ngIf="showModal">
+  <div class="modal-content">
+    <h2>Private Project</h2>
+    <p>
+      This project is part of an internal system and is not publicly accessible.
+      The code repository is private, but you may request more information
+      during an interview or via contact.
+    </p>
+    <button (click)="closeModal()">Close</button>
+  </div>
+</div>
+
+<!--
 <div class="content4">
   <h2 id="Project">PROJECTS</h2>
 
@@ -265,12 +266,14 @@
     <div class="card">
       <div class="cover item-a">
         <h1>Bargiam<br />Web Page</h1>
-        <span class="price"> <img src="../../assets/images/pic08.webp" /></span>
+        <span class="price">
+          <img src="../../assets/images/ImagenBargiam.JPG"
+        /></span>
         <div class="card-back">
           <p>
-            Web page created by the Bargiam business that produces and exports
-            national foods, is an informative page containing various sections
-            such as home, food, products, galleries and contacts.
+            Professional website with a custom design, developed in WordPress.
+            Includes interactive sections such as products, galleries, and
+            contact information.
           </p>
           <p class="tecnologia">TECHNOLOGY</p>
           <div class="imagenes-tecnologia">
@@ -284,7 +287,9 @@
     <div class="card">
       <div class="cover item-b">
         <h1>Galaga <br />Star (Game)</h1>
-        <span class="price"> <img src="../../assets/images/pic04.webp" /></span>
+        <span class="price">
+          <img src="../../assets/images/GalagaStar.jpg"
+        /></span>
         <div class="card-back">
           <p>
             Is an exciting game inspired by the legendary Galaga. Fight against
@@ -328,9 +333,10 @@
         <span class="price"><img src="../../assets/images/pic11.webp" /></span>
         <div class="card-back">
           <p>
-            In this system you could create, edit, display or delete user and
-            warranty tickets. It has roles and a log was also created to control
-            the actions.
+            Internal system developed by a 4-person team. I was responsible for
+            both frontend and backend features, including user and warranty
+            ticket management (create, edit, view, delete), role-based access
+            control, and activity logging.
           </p>
           <p class="tecnologia">TECHNOLOGY</p>
           <div class="imagenes-tecnologia">
@@ -346,3 +352,4 @@
     </div>
   </div>
 </div>
+-->
