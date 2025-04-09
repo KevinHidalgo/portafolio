@@ -471,7 +471,7 @@ height: 240px;
   .project-card img {
     width: 100%;
     height: 160px;
-    object-fit: cover;
+    object-fit:fill;
   }
   
   .card-content {
@@ -502,7 +502,7 @@ height: 240px;
   .tech-icons img {
     width: 30px;
     height: 30px;
-    object-fit: contain;
+    object-fit:contain;
   }
   
   .card-actions {
@@ -779,7 +779,7 @@ height: 240px;
       }
 
 /* nueva section */
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;600&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;600&display=swap');
 	
 .content4{
     max-width: 1000px;
@@ -793,7 +793,7 @@ height: 240px;
 		.row{
 			align-items: center;
     	height: 100vh;
-		} */
+		} 
 	}
 
     .content4 h2{
@@ -802,7 +802,7 @@ height: 240px;
         text-align: center;
         margin-bottom: 60px;
         letter-spacing: 6px;
-        text-shadow: 3px 4px 3px var(--decoracion); /* Sombra letras en verde */
+        text-shadow: 3px 4px 3px var(--decoracion); 
         color: var(--text-color);
         }
 
@@ -991,7 +991,7 @@ height: 240px;
             color: var(--text-color);
         }
 	}
-}
+}*/
 
             /* Moviles */
             @media screen and (max-width: 400px) {

@@ -152,7 +152,7 @@
 <div class="Project"><h2 id="Project" #Project>PROJECTS</h2></div>
 <div class="content3">
   <div class="project-card">
-    <img src="../../assets/images/bargiam.JPG" alt="Bargiam Web Page" />
+    <img src="../../assets/images/bargiam2.JPG" alt="Bargiam Web Page" />
     <div class="card-content">
       <h3>Bargiam Web Page</h3>
       <p>
@@ -173,7 +173,7 @@
   </div>
 
   <div class="project-card">
-    <img src="../../assets/images/Galaga.png" alt="Galaga Star" />
+    <img src="../../assets/images/CapturaGalaga.JPG" alt="Galaga Star" />
     <div class="card-content">
       <h3>Galaga Star (Game)</h3>
       <p>
@@ -185,8 +185,14 @@
         <img src="../../assets/images/pic04.webp" alt="Tech 2" />
       </div>
       <div class="card-actions">
-        <a href="#" target="_blank" class="btn disabled">Site</a>
-        <span class="btn">Public <i class="fa-brands fa-github"></i></span>
+        <span class="btn" (click)="openModal2()">Demo</span>
+        <a
+          href="https://github.com/KevinHidalgo/GalagaStar.git"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="btn">Public <i class="fa-brands fa-github"></i></span>
+        </a>
       </div>
     </div>
   </div>
@@ -242,10 +248,34 @@
       </div>
     </div>
   </div>
+
+  <div class="project-card">
+    <img src="../../assets/images/api.png" alt="Api .net" />
+    <div class="card-content">
+      <h3>Api .Net Users</h3>
+      <p>
+        I developed a backend API in .NET with C#, using JWT for authentication.
+        It manages users, roles, and sessions via login and CRUD, ready to be
+        easily integrated with a standalone frontend view.
+      </p>
+      <div class="tech-icons">
+        <img src="../../assets/images/pic10.webp" alt="Tech .NET" />
+      </div>
+      <div class="card-actions">
+        <a
+          href="https://github.com/KevinHidalgo/api-.net-usuarios.git"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="btn">Public <i class="fa-brands fa-github"></i></span>
+        </a>
+      </div>
+    </div>
+  </div>
   <!-- Agrega aquí los otros proyectos igual... -->
 </div>
 
-<!-- Modal -->
+<!-- Modal private -->
 <div class="modal-overlay" *ngIf="showModal">
   <div class="modal-content">
     <h2>Private Project</h2>
@@ -255,6 +285,17 @@
       during an interview or via contact.
     </p>
     <button (click)="closeModal()">Close</button>
+  </div>
+</div>
+
+<!-- Modal DEMO-->
+<div class="modal-overlay" *ngIf="showModal2">
+  <div class="modal-content">
+    <video width="320" height="240" controls>
+      <source src="../../assets/images/galagaVideo.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <button (click)="closeModal2()">Close</button>
   </div>
 </div>
 

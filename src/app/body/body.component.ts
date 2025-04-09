@@ -15,7 +15,8 @@ export class BodyComponent implements AfterViewInit{
   private destroy$ = new Subject<void>();
   cells: HTMLElement[] = []; // Almacena todas las celdas de la cuadrícula
   @ViewChild('About') header!: ElementRef;
-  showModal:boolean = false;
+  showModal:boolean = false; // Modal para mensaje privado
+  showModal2:boolean = false;// Modal para video demo galaga
 
   ngAfterViewInit(): void {
     this.initializeGrid();
@@ -137,5 +138,13 @@ if (rectMiddle > 0 && rectMiddle < windowHeight){
   
   closeModal() {
     this.showModal = false;
+  }
+
+  openModal2() {
+    this.showModal2 = true;
+  }
+  
+  closeModal2() {
+    this.showModal2 = false;
   }
 }
