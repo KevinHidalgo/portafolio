@@ -15,6 +15,7 @@ export class BodyComponent implements AfterViewInit{
   private destroy$ = new Subject<void>();
   cells: HTMLElement[] = []; // Almacena todas las celdas de la cuadrícula
   @ViewChild('About') header!: ElementRef;
+  @ViewChild('Project') header2!: ElementRef;
   showModal:boolean = false; // Modal para mensaje privado
   showModal2:boolean = false;// Modal para video demo galaga
 
@@ -28,24 +29,57 @@ export class BodyComponent implements AfterViewInit{
     const descripcion = document.querySelector('.descripcion') as HTMLElement;
     const itemsExperience = document.querySelector('.items-Experience') as HTMLElement;
     const skills = document.querySelector('.skills') as HTMLElement;
-    const rect = content.getBoundingClientRect();
+
+    const tarjeta1 = document.querySelector('.tarjeta1') as HTMLElement;// Para mostrar titulo cuando vaya por la mitad de la primer tarjeta
+    const rect2 = tarjeta1.getBoundingClientRect(); // Rectangulo tarjeta1
+
+    const rect = content.getBoundingClientRect(); // Rectangulo contenido2
     const windowHeight = window.innerHeight;
 
     
 // Calcular el punto medio del rectángulo
 const rectMiddle = (rect.top + rect.bottom) / 2;
 
-// Verificar si el punto medio está dentro del viewport
+// Verificar si el punto medio está dentro del viewport en el contenido 2
 if (rectMiddle > 0 && rectMiddle < windowHeight){
   this.header.nativeElement.classList.add('reveal');
   //  if (rect.top < windowHeight && rect.bottom > 0) {
       this.animateGrid();
       this.revealContent(descripcion);
+      descripcion.classList.add('animar');
       this.revealContent(itemsExperience);
+      itemsExperience.classList.add('anima');
       this.revealContent(skills);
+      skills.classList.add('anima');
     } 
-  }
+  
 
+// Calcular el punto medio del rectángulo 2
+const rectMiddle2 = (rect2.top + rect2.bottom) / 2;
+
+  // Verificar si el punto medio está dentro del viewport en el contenido 2
+  if (rectMiddle2 > 0 && rectMiddle2 < windowHeight){
+    this.header2.nativeElement.classList.add('reveal');
+  }
+/* Animacion tarjetas */
+  const tarjetas = document.querySelectorAll('.project-card');
+
+  tarjetas.forEach((tarjeta, index) => {
+    const rect = tarjeta.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    // Si la tarjeta está entrando en viewport
+    if (rect.top < windowHeight - 100) {
+      // Aplicamos animación solo si aún no tiene la clase
+      if (!tarjeta.classList.contains('aparecer')) {
+        tarjeta.classList.add('aparecer');
+        // Añadimos un pequeño retraso para efecto cascada
+        (tarjeta as HTMLElement).style.animationDelay = `${index * 0.15}s`;
+      }
+    }
+  });
+
+}
   constructor(private renderer: Renderer2) {}
 
    initializeGrid(): void {

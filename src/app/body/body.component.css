@@ -53,6 +53,7 @@ height: 240px;
     position: relative;
     animation: moverCentro 2s ease-out forwards;
     color: var(--text-color);
+    text-align: center;
 }
 
 
@@ -63,6 +64,14 @@ height: 240px;
     }
     100% {
       left: 0; 
+    }
+  }
+  @keyframes derechaCentro {
+      0% {
+        transform: translateX(100%); 
+    }
+    100% {
+      transform: translateX(0); 
     }
   }
 
@@ -118,24 +127,25 @@ height: 240px;
 }
 
 .content1 .text p{
-    text-align:left;
-    margin-bottom: 36px; 
-    margin-top: 34px;
+    text-align:justify;
+    margin-bottom: 19px; 
+    margin-top: 24px;
     width: 110%;
 }
 
 .content1 .text button{
-    text-align:center;
-    font-size: 14px;
-    font-weight: 600;
-    height: 35px;
-    width: 160px;
-    background-color:var(--decoracion2);
-    border-radius: 10px;
-    border:2px solid var(--text-color);
-    cursor: pointer;
-    transition: all .4s ease;
-    color: var(--text-color2);
+  text-align:center;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  text-decoration: none;
+  background-color:var(--decoracion2);
+  border-radius: 10px;
+  border:2px solid var(--text-color2);
+  cursor: pointer;
+  transition: all .4s ease;
+  color: var(--text-color2);
 }
 
 .content1 .text button:hover{
@@ -143,11 +153,88 @@ height: 240px;
     color: var(--text-color2);
 }
 
+.dedoIzq {
+  position: absolute;
+ /* top: 75%;  puedes ajustar para que quede alineado con el botón */
+  right: -40px; /* inicia fuera a la derecha */
+  font-size: 1.8rem;
+  margin-top: 10px;
+  color: var(--color-bg); 
+  animation: moverDedoIzq 3s linear infinite;
+  pointer-events: none; /* para que no interfiera con clics */
+}
+.dedoDer {
+  position: absolute;
+ /* top: 75%;  puedes ajustar para que quede alineado con el botón */
+  left: -40px; /* inicia fuera a la izquierda */
+  font-size: 1.8rem;
+  margin-top: 10px;
+  color: var(--color-bg); 
+  animation: moverDedoDer 3s linear infinite;
+  pointer-events: none; /* para que no interfiera con clics */
+}
+@keyframes moverDedoIzq {
+  0% {
+    right: -40px;
+    opacity: 1;
+  }
+  70% {
+    right: 100px;
+    opacity: 1;
+  }
+  80% {
+    right: 75px; /* se acerca */
+    opacity: 1;
+  }
+  85% {
+    right: 100px; /* pequeño rebote hacia atrás */
+  }
+  90% {
+    right: 75px; /* y vuelve */
+    opacity: 1;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    right: -40px;
+    opacity: 0;
+  }
+}
+@keyframes moverDedoDer {
+  0% {
+    left: -40px;
+    opacity: 1;
+  }
+  70% {
+    left: 100px;
+    opacity: 1;
+  }
+  80% {
+    left: 75px; /* se acerca */
+    opacity: 1;
+  }
+  85% {
+    left: 100px; /* pequeño rebote hacia atrás */
+  }
+  90% {
+    left: 75px; /* y vuelve */
+    opacity: 1;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    left: -40px;
+    opacity: 0;
+  }
+}
+
 .content1 .imagenes{
     width: 50%;
     display: flex;
     justify-content: center;
-    margin-top: -20px;
+    margin-top: -40px;
 }
 
 .content1 .imagenes .imagen-1{
@@ -293,7 +380,9 @@ height: 240px;
         text-align: justify;
         color: var(--text-color2);
     }
-
+    .content2 .descripcion.animar {
+      animation: moverCentro 2s ease-out forwards; 
+    }
     .content2 .items-Experience{
         width: 40%;
     }
@@ -308,7 +397,6 @@ height: 240px;
         box-shadow: inset 0 0 0 1px var(--sombraInterna); /* Sombra interna en verde */
         animation: clipMe 8s linear infinite;
     }
-
 
 .content2 .experience::before,
 .content2 .experience::after {
@@ -428,6 +516,15 @@ height: 240px;
         transition: opacity 2s ease-in-out;
       }
 
+      .content2 .items-Experience.anima
+      {
+        animation: derechaCentro 2s ease-out forwards;
+      }
+      .content2 .skills.anima
+      {
+        animation: derechaCentro 2s ease-out forwards;
+      }
+
    /*Content3 (Proyectos)*/
    .Project{
     max-width: 1000px;
@@ -440,9 +537,15 @@ height: 240px;
     font-weight: 800;
     text-align: center;
     letter-spacing: 6px;
+    transform: scale(0.5) translateY(100px); /* Escala pequeña y desplazada hacia abajo */
     text-shadow: 3px 4px 3px var(--decoracion); /* Sombra letras en verde */
     transition: transform 1s ease, opacity 1s ease; /* Transiciones suaves */
     color: var(--text-color);
+    opacity: 0;
+    }
+    .Project h2.reveal {
+      opacity: 1; /* Aparece */
+      transform: scale(1) translateY(0); /* Escala y posición originales */
     }
    .content3 {
     display: grid;
@@ -460,8 +563,14 @@ height: 240px;
     border-radius: 1rem;
     overflow: hidden;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform, box-shadow, opacity 0.3s ease;
+    opacity: 0;
+    transform: translateY(40px);
   }
+  /* Se aplicará cuando el usuario haga scroll y estén visibles */
+.project-card.aparecer {
+  animation: aparecerTarjeta 0.8s ease-out forwards;
+}
   
   .project-card:hover {
     transform: translateY(-5px);
@@ -589,6 +698,18 @@ height: 240px;
     text-align: center;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
   }
+  @keyframes aparecerTarjeta {
+    0% {
+      opacity: 0;
+      transform: translateY(40px) scale(0.95);
+      filter: blur(4px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      filter: blur(0);
+    }
+  }
       /*FIN CONTENT3*/
       @media screen and (max-width: 800px) { /* tablets */
         .social-bar {
@@ -603,7 +724,9 @@ height: 240px;
             height: auto;
         }
 
-
+        .content1 .text{
+          overflow-x: hidden;
+        }
         .content1 .imagenes{
             margin: auto;
             margin-top: -28px;
@@ -701,12 +824,13 @@ height: 240px;
           
       }
       @media screen and (max-width: 600px) {
-        .content1{
+        .content1{ 
             width: 100%;
             }
             
             .content1 .text{
                 width: 100%;
+                margin-top: -110px; 
             }
             
             .content1 .text h2{
@@ -727,29 +851,29 @@ height: 240px;
                 width: 80%;
                 padding: 0;
                 margin:auto; 
-                margin-bottom: 46px; 
+                margin-bottom: 26px; 
                 margin-top: 26px; 
             }
 
-            .content1 .imagenes{
-                width: 100%;
+            .content1 .imagenes{  
+              width: 100%;
+              margin-top: -50px;
             }
 
             .content1 .imagenes .imagen-1{
                 cursor: pointer;
                 transition: width 0.5s, height 0.5s, transform 0.5s;
-                animation: reducir 2s ease-out forwards,bounce-down 1.8s ease-in-out forwards 2.5s;
-             
+                animation: reducir 1s ease-out forwards,bounce-down 1.5s ease-in-out forwards 1.2s;
             }
             .content1 .imagenes .imagen-2{
                 cursor: pointer;
                 transition: width 0.5s, height 0.5s, transform 0.5s;
-                animation: reducir 2s ease-out forwards,bounce-down 1s ease-in-out forwards 3.5s;
+                animation: reducir 1s ease-out forwards,bounce-down 1s ease-in-out forwards 2s;
             }
             /* Animación */
             @keyframes bounce-down {
                 0% {
-                transform: translateY(0);
+                transform: translateY(0px);
                 }
                 60% {
                 transform: translateY(10px);
@@ -758,7 +882,7 @@ height: 240px;
                 transform: translateY(5px);
                 }
                 100% {
-                transform: translateY(35px);
+                transform: translateY(25px);
                 }
             }
             .content2 .descripcion{
