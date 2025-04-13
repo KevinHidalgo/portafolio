@@ -47,8 +47,10 @@
   >
     <img
       class="imagen-1"
-      src="../../assets/images/perfil1.webp"
+      src="assets/images/perfil1.webp"
       alt="Photo Profile"
+      width="250"
+      height="220"
       (mouseenter)="onHover('imagen-1')"
       (mouseleave)="onLeave('imagen-1')"
     />
@@ -157,7 +159,7 @@
 <div class="Project"><h2 id="Project" #Project>PROJECTS</h2></div>
 <div class="content3">
   <div class="project-card tarjeta1">
-    <img src="../../assets/images/bargiam2.JPG" alt="Bargiam Web Page" />
+    <img src="assets/images/bargiam2.webp" alt="Bargiam Web Page" />
     <div class="card-content">
       <h3>Bargiam Web Page</h3>
       <p>
@@ -166,7 +168,7 @@
         information.
       </p>
       <div class="tech-icons">
-        <img src="../../assets/images/pic08.webp" alt="Tech 1" />
+        <img src="assets/images/pic08.webp" alt="Tech 1" />
       </div>
       <div class="card-actions">
         <a href="https://bargiam.com/" target="_blank" class="btn">Site</a>
@@ -178,7 +180,7 @@
   </div>
 
   <div class="project-card">
-    <img src="../../assets/images/CapturaGalaga.JPG" alt="Galaga Star" />
+    <img src="assets/images/CapturaGalaga.JPG" alt="Galaga Star" />
     <div class="card-content">
       <h3>Galaga Star (Game)</h3>
       <p>
@@ -187,7 +189,7 @@
         in space.
       </p>
       <div class="tech-icons">
-        <img src="../../assets/images/pic04.webp" alt="Tech 2" />
+        <img src="assets/images/pic04.webp" alt="Tech 2" />
       </div>
       <div class="card-actions">
         <span class="btn" (click)="openModal2()">Demo</span>
@@ -204,7 +206,7 @@
 
   <div class="project-card">
     <img
-      src="../../assets/images/controlGarantias1.jpg"
+      src="assets/images/controlGarantias1.jpg"
       alt="Guarantees Control GND"
     />
     <div class="card-content">
@@ -229,7 +231,7 @@
   </div>
 
   <div class="project-card">
-    <img src="../../assets/images/GBM.JPG" alt="Guarantees Control GND" />
+    <img src="assets/images/GBM.JPG" alt="Guarantees Control GND" />
     <div class="card-content">
       <h3>GBM Web Page</h3>
       <p>
@@ -255,7 +257,7 @@
   </div>
 
   <div class="project-card">
-    <img src="../../assets/images/api.png" alt="Api .net" />
+    <img src="assets/images/api.png" alt="Api .net" />
     <div class="card-content">
       <h3>Api .Net Users</h3>
       <p>
@@ -264,7 +266,7 @@
         easily integrated with a standalone frontend view.
       </p>
       <div class="tech-icons">
-        <img src="../../assets/images/pic10.webp" alt="Tech .NET" />
+        <img src="assets/images/pic10.webp" alt="Tech .NET" />
       </div>
       <div class="card-actions">
         <a
@@ -297,7 +299,7 @@
 <div class="modal-overlay" *ngIf="showModal2">
   <div class="modal-content">
     <video width="320" height="240" controls>
-      <source src="../../assets/images/galagaVideo.mp4" type="video/mp4" />
+      <source src="assets/images/galagaVideo.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
     <button (click)="closeModal2()">Close</button>

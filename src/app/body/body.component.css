@@ -237,9 +237,7 @@ height: 240px;
     margin-top: -40px;
 }
 
-.content1 .imagenes .imagen-1{
-    height: 220px;
-    width: 250px;   
+.content1 .imagenes .imagen-1{ 
     margin-top: -25px;
     animation:reducir 2s ease-out forwards;
     cursor: pointer;
