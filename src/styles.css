@@ -52,7 +52,32 @@
 }
     /*azul claro (#E9F1FA), azul brillante (#00ABE4), blanco (#FFFFFF)*/
 
-
+/*Tema de Dexter*/
+.Dexter-theme {
+    --bg-gradient: linear-gradient(135deg, #141f26, #28353d 40%, #141f26 41%, #28353d 82%, #141f26 83%, #28353d 100%);
+    --text-color: #ffffff;
+    --text-color2: #e0f7ff;
+    --text-color3: #f5f5f5;
+    --color-bg: #2d3640;
+    --header-bg: rgba(12, 19, 26, 0.95);
+    --header-bg2: rgba(12, 19, 26, 0.2);
+    --footer-bg: #0c131a;
+    --decoracion: #59f8ff;
+    --decoracion2: #e23bfa;
+    --decoracion3: #e8ff72;
+    --decoracion4: #ff69b4;
+    --decoracion5: #b2fef7;
+    --IncrementoDecoracion: #59f8ff;
+    --contenido: rgba(45, 54, 64, 0.8);
+    --sombraSuperior: rgba(0, 0, 0, 0.4);
+    --sombraInterna: rgba(89, 248, 255, 0.3);
+    --sombraTarjeta: rgba(0, 0, 0, 0.3);
+    --sombraTarjeta2: rgba(0, 0, 0, 0.3);
+    --barraExterna: #0c131a;
+    --barraInterna: #59f8ff;
+    --icono: #59f8ff;
+    --palabraEspecial: #ff69b4;
+}
 
 *{
     color-scheme:dark;
